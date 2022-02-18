@@ -33,7 +33,7 @@ Original execution time for stocks in year 2018
 
 
 ### Refacted script and performance
-Is there a way to speed up by eliminating loops? The answer is yes. Since all the stock tickers are sorted, when the computer identified a stock ticker, it can start obtaining its starting price, and accumulating its daily volumn untill it found a new stock ticker appears. Thus, the computer just need to run through the data set once to obtain all the information we want. 
+Is there a way to speed up by eliminating loops? The answer is yes. Since all the stock tickers are sorted, when the computer identified a stock ticker, it can start obtaining its starting price, and accumulating its daily volumn untill it found a new stock ticker appears. Thus, the computer just need to run through the data set once to obtain all the information we want. It upgraded the solution from O(n2) to O(n).
 
 Secondly, instead of creating ticker arrays manually for each stocks, we create a variable called current_ticker indicate which ticker we are doing currently. It is initialised to be empty "" before starting the for loop. Inside the for loop, when the cell the computer is reading is not equal to current_ticker, it must be a new ticker. And then the computer knows to start counting the total ticker volumn and get its starting and ending price to calculate the return. 
 
